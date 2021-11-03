@@ -1,5 +1,13 @@
 export const en = {
   title: 'Welcome to ',
+  contacts: {
+    title: 'Contacts',
+    adress: '17, Lermotovskay str., Kharkiv, Ukraine',
+    open: 'Open',
+    workend: 'Mn-St: 9:00 a.m - 6:00 p.m',
+    weekend: 'Sanday',
+    sn: 'Social Networks'
+  },
   nav: {
     home: `Home`,
     services: `Services`,

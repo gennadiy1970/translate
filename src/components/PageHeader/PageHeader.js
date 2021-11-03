@@ -10,7 +10,7 @@ function PageHeader({language}) {
   return (
     <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
     <Row >
-      <Col span={4}>
+      <Col span={2}>
         <div className="logo" style={{ padding: '4px' }}>
           <Image
             src={logo}
@@ -20,8 +20,8 @@ function PageHeader({language}) {
           />
         </div>
       </Col>
-      <Col span={18}>
-        <Row>
+      <Col span={20}>
+        <Row justify="start">
           <Col >
             <Nav language={language} />
           </Col>

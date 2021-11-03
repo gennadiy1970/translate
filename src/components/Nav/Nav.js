@@ -9,7 +9,6 @@ import {
   UsergroupAddOutlined,
   InfoCircleOutlined,
 } from '@ant-design/icons';
-// import LanguageSelector from '../LanguageSelector';
 import locale from '../../locales';
 
 
@@ -66,11 +65,6 @@ function Nav({language = 'uk'}) {
           <a>{about}</a>
         </Link>
       </Menu.Item>
-
-      {/* <Menu.Item key="LanguageSelector"
-        >
-        <LanguageSelector  />
-      </Menu.Item> */}
     </Menu>
   );
 }
