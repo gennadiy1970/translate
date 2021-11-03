@@ -1,28 +1,40 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import locale from '../src/locales';
-import { Button, Space, DatePicker, Card } from 'antd';
-import { CiCircleFilled } from '@ant-design/icons';
+import { Typography, Divider, Row, Col, BackTop } from 'antd';
+const { Title, Paragraph } = Typography;
+import Vendors from '../src/components/Vendors';
 
 function About() {
   const router = useRouter();
   const language = router.locale;
-  const onChange = e => {
-    console.log(e);
-  }
+  const { h1, p1, p2, p3, h2 } = locale[language].about;
+
   return (
-    <div>
-      <h1>About</h1>
-      {locale[language].title}
-      <div style={{ padding: 100 }}>
-      <Space direction="vertical">
-        <Button type="primary">Primary Button</Button>
-        <Button type="ghost">Ghost Button</Button>
-        <DatePicker onChange={onChange} />
-        <CiCircleFilled />
-      </Space>
-    </div>
-    </div>
+    <>
+      <Row justify="center">
+        <Col xs={20} sm={18} md={16} lg={14} xl={12}>
+          <Typography>
+            <Title>{h1}</Title>
+            <Paragraph>{p1}</Paragraph>
+            <Paragraph>{p2}</Paragraph>
+            <Paragraph>{p3}</Paragraph>
+            <Divider />
+          </Typography>
+        </Col>
+      </Row>
+      <Row justify="center">
+        <Col xs={20} sm={18} md={16} lg={14} xl={12}>
+          <Typography>
+            <Title level={2}>{h2}</Title>
+          </Typography>
+          <Row justify="center" align="middle">
+            <Vendors />
+          </Row>
+        </Col>
+        <BackTop />
+      </Row>
+    </>
   );
 }
 

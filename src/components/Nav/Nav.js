@@ -13,7 +13,7 @@ const { SubMenu } = Menu;
 
 function Nav() {
   return (
-    <Menu mode="horizontal">
+    <Menu mode="horizontal" className="header-bg">
       <Menu.Item key="/" icon={<HomeOutlined />}>
         <Link href="/">
           <a>Home</a>
@@ -56,8 +56,9 @@ function Nav() {
         </Link>
       </Menu.Item>
 
-      <Menu.Item key="LanguageSelector">
-        <LanguageSelector />
+      <Menu.Item key="LanguageSelector"
+        >
+        <LanguageSelector  />
       </Menu.Item>
     </Menu>
   );
