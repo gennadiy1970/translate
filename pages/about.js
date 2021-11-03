@@ -1,13 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import locale from '../src/locales';
 import { Typography, Divider, Row, Col, BackTop } from 'antd';
 const { Title, Paragraph } = Typography;
 import Vendors from '../src/components/Vendors';
 
-function About() {
-  const router = useRouter();
-  const language = router.locale;
+function About({language='uk'}) {
   const { h1, p1, p2, p3, h2 } = locale[language].about;
 
   return (

@@ -1,12 +1,9 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import { Layout } from 'antd';
 const { Content, Footer } = Layout;
 import PageHeader from '../PageHeader';
 
-function PageLayout({ children }) {
-  const router = useRouter();
-  const language = router.locale;
+function PageLayout({ children, language }) {
   return (
     <Layout className="layout">
       <PageHeader language={language}/>
