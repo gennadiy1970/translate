@@ -36,3 +36,11 @@
 .header-bg {
   background-color: antiquewhite;
 }
+
+.text-center {
+  text-align: center;
+}
+div.ant-typography {
+  text-indent: 1rem;
+  font-size: 16px;
+}

@@ -14,9 +14,9 @@ export const vendors = [
     href: 'https://uvin.com.ua/',
     alt: 'Частное предприятие «ЮВИН»',
   },
-  { src: vendor_4, href: 'https://www.certification.ua/', alt: 'MNC Group' },
+  { src: vendor_8, href: 'https://bookclub.ua/', alt: 'Книжковий Клуб «Клуб Сімейного Дозвілля»' },
   { src: vendor_5, href: 'https://www.vomm.it/', alt: 'VOMM' },
   { src: vendor_6, href: 'https://menergo.com.ua/en/contact.html', alt: 'LLC Scientific and Production Enterprise Monolit Energo' },
   { src: vendor_7, href: 'https://kharkov.prom.ua/brands/Agrosvit', alt: 'АГРОПРОМИСЛОВА АСОЦІАЦІЯ АГРОСВІТ' },
-  { src: vendor_8, href: 'https://bookclub.ua/', alt: 'Книжковий Клуб «Клуб Сімейного Дозвілля»' },
+  { src: vendor_4, href: 'https://www.certification.ua/', alt: 'MNC Group' },
 ];
