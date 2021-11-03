@@ -2,7 +2,9 @@
   --height-header: 64px;
   --height-footer: 70px;
 }
-
+body {
+  font-size: 16px;
+}
 .site-layout-content {
   --top: 50px;
   margin-top: calc(var(--top) + var(--height-header) - 20px);
@@ -42,5 +44,5 @@
 }
 div.ant-typography {
   text-indent: 1rem;
-  font-size: 16px;
+  /* font-size: 16px; */
 }

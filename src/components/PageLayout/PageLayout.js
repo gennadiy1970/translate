@@ -1,34 +1,15 @@
 import React from 'react';
-import { Layout, Row, Col } from 'antd';
-const { Header, Content, Footer } = Layout;
-import Image from 'next/image';
-import logo from '../../../public/Logo.png';
-import Nav from '../Nav';
+import { useRouter } from 'next/router';
+import { Layout } from 'antd';
+const { Content, Footer } = Layout;
+import PageHeader from '../PageHeader';
 
 function PageLayout({ children }) {
+  const router = useRouter();
+  const language = router.locale;
   return (
     <Layout className="layout">
-      <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-        <Row >
-          <Col span={4}>
-            <div className="logo" style={{ padding: '4px' }}>
-              <Image
-                src={logo}
-                height="58"
-                width="58"
-                alt="'Eurasia' Translation Agency"
-              />
-            </div>
-          </Col>
-          <Col span={20}>
-            <Row>
-              <Col >
-                <Nav />
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Header>
+      <PageHeader language={language}/>
       <Content style={{ padding: '0 50px' }}>
         <div className="site-layout-content"> {children}</div>
       </Content>

@@ -4,62 +4,73 @@ import { Menu } from 'antd';
 import {
   HomeOutlined,
   FormOutlined,
+  ContactsOutlined,
   ContainerOutlined,
   UsergroupAddOutlined,
   InfoCircleOutlined,
 } from '@ant-design/icons';
-import LanguageSelector from '../LanguageSelector';
+// import LanguageSelector from '../LanguageSelector';
+import locale from '../../locales';
+
+
 const { SubMenu } = Menu;
 
-function Nav() {
+function Nav({language = 'uk'}) {
+  const { home, services, gs, tt, sf, contacts, news, ft, about } = locale[language].nav;
   return (
     <Menu mode="horizontal" className="header-bg">
       <Menu.Item key="/" icon={<HomeOutlined />}>
         <Link href="/">
-          <a>Home</a>
+          <a>{home}</a>
         </Link>
       </Menu.Item>
 
-      <SubMenu key="SubMenu" icon={<FormOutlined />} title="Services">
+      <SubMenu key="SubMenu" icon={<FormOutlined />} title={services}>
         <Menu.Item key="/services/general">
           <Link href="/services/general">
-            <a>General services</a>
+            <a>{gs}</a>
           </Link>
         </Menu.Item>
         <Menu.Item key="/services/types">
           <Link href="/services/types">
-            <a>Translation types</a>
+            <a>{tt}</a>
           </Link>
         </Menu.Item>
         <Menu.Item key="/services/send-file">
           <Link href="/services/send-file">
-            <a>Send file</a>
+            <a>{sf}</a>
           </Link>
         </Menu.Item>
       </SubMenu>
 
       <Menu.Item key="/news" icon={<ContainerOutlined />}>
         <Link href="/">
-          <a>News</a>
+          <a>{news}</a>
+        </Link>
+      </Menu.Item>
+
+      <Menu.Item key="/contacts" icon={<ContactsOutlined />}>
+        <Link href="/contacts">
+          <a>{contacts}</a>
         </Link>
       </Menu.Item>
 
       <Menu.Item key="/for-translators" icon={<UsergroupAddOutlined />}>
         <Link href="/for-translators">
-          <a>For Translators</a>
+          <a>{ft}</a>
         </Link>
       </Menu.Item>
 
       <Menu.Item key="/about" icon={<InfoCircleOutlined />}>
         <Link href="/about">
-          <a>About</a>
+          <a>{about}</a>
         </Link>
       </Menu.Item>
 
-      <Menu.Item key="LanguageSelector"
+      {/* <Menu.Item key="LanguageSelector"
         >
         <LanguageSelector  />
-      </Menu.Item>
+      </Menu.Item> */}
     </Menu>
   );
 }

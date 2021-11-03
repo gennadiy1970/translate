@@ -1,5 +1,16 @@
 export const en = {
   title: 'Welcome to ',
+  nav: {
+    home: `Home`,
+    services: `Services`,
+    gs: `General services`,
+    tt: `Translation types`,
+    sf: `Send file`,
+    contacts: `Contacts`,
+    news: `News`,
+    ft: `For Translators`,
+    about: `About`,
+  },
   about: {
     h1: `About`,
     p1: `Eurasia Translation Bureau has been operating in the translation services market for over 15 years. During this time, we have created a strong team of professionals who are constantly improving their professional skills and love their job. Many of our clients have been cooperating with us for many years, and we are constantly working to justify their high confidence.`,
