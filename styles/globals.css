@@ -26,6 +26,14 @@
   max-width: 160px;
   display: flex;
 }
+.social-wrapper {
+  min-height: 50px;
+  max-width: 50px;
+  display: flex;
+}
+.social-wrapper:hover{
+  background-color: rgb(187, 178, 178)
+}
 .image-fit {
   display: block;
   width: 100%;

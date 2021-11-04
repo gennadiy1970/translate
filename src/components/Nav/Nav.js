@@ -7,6 +7,7 @@ import {
   ContainerOutlined,
   UsergroupAddOutlined,
   InfoCircleOutlined,
+  ContactsOutlined
 } from '@ant-design/icons';
 import LanguageSelector from '../LanguageSelector';
 const { SubMenu } = Menu;
@@ -53,6 +54,11 @@ function Nav() {
       <Menu.Item key="/about" icon={<InfoCircleOutlined />}>
         <Link href="/about">
           <a>About</a>
+        </Link>
+      </Menu.Item>
+      <Menu.Item key="/contacts" icon={<ContactsOutlined />}>
+        <Link href="/contacts">
+          <a>Contacts</a>
         </Link>
       </Menu.Item>
 
